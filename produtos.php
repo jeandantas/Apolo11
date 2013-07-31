@@ -6,18 +6,11 @@
         <style type = "text/css">
             #texto	{
                             width: 700px;
-                            height: auto;
-                            float:left;
-                            background-color: Snow;
+                            float:right;
                             margin-left: 20px;
                             margin-right: 5px;
                             text-align: justify;
                             margin-bottom: 20px;
-                    }
-            #imagens{
-                            float: right;
-                            width: 225px;
-                            height: 500px;
                     }
             #texto h2 {
                             margin-top: 50px;
@@ -25,25 +18,32 @@
                     }
             #imagens {
                             background:#00C5CD;
-                            height:500px;
-                            width:245px;
-                            float:right;
-                            margin-top:0;
+                            height:400px;
+                            width:200px;
+                            float:left;
+                            margin-top:0px;
                             margin-bottom:50px;
-                            }
-            dl	{
-                            margin:0;
-                            padding:0;
-                    }
-            dd	{
+                            padding-top: 50px;
+                            padding-left: 30px;
+                      }
+            
+            #texto dd   {
                             margin-left: 20px;
-                    }
-            .principal dl {
-                            width:195px;
+                        }
+            #texto dl {
+                            width:200px;
                             float:left;
                             margin-bottom:30px;
-                            margin-right: 30px;
-                    }
+                            margin-right: 25px;
+                       }
+             #imagens dt{
+                            margin-left: 10px;
+                            margin-top: 15px;
+                            font-size: 20px;
+                        }
+             #imagens dd{
+                            font-size: 15px;
+                        }
         </style>
     </head>
     <body>
@@ -83,6 +83,7 @@
                             <dd>Excellent supplement from the beehive</dd>
                             <dd>Boosts energy</dd>    
                             <dd>May enhance stamina</dd>
+                            <dd> Price: U$ 15,00 </dd>
                     </dl>
 
                     <dl>
@@ -91,6 +92,7 @@
                             <dd>Excellent supplement from the beehive</dd>
                             <dd>Boosts energy</dd>    
                             <dd>May enhance stamina</dd>
+                            <dd> Price: U$ 15,00 </dd>
                     </dl>
 
                     <dl>
@@ -99,6 +101,7 @@
                             <dd>Excellent supplement from the beehive</dd>
                             <dd>Boosts energy</dd>    
                             <dd>May enhance stamina</dd>
+                            <dd> Price: U$ 15,00 </dd>
                     </dl>
 
                     <dl>
@@ -150,7 +153,17 @@
                     </dl>
             </div>
             <div id = "imagens">
-                    teste
+                <dl>
+                    <dt> Forever Living </dt>
+                        <dd> Higiene Pessoal<dd>
+                        <dd> Sucos </dd>
+                    <dt> Herbalife </dt>
+                    <dd> Nutri&ccedil;&abreve;o </dd>
+                        <dd> Fragrancias</dd>
+                    <dt> Outros Produtos </dt>
+                        <dd> Naturais <dd>
+                        <dd> Artificiais </dd>
+                </dl>
             </div>
             <div id = "creditos">
                     <p>Copyright &copy; 2013 - <b>Text</b> <span> Produtos Naturais </span> </p>
