@@ -29,7 +29,7 @@
                         <li> <a href = "index.php"> HOME </a> </li>
                         <li> <a href = "produtos.php"> PRODUTOS </a> </li>
                         <li> <a href = "contato.php"> CONTATO </a> </li>
-                        <li> <a href = "escritorio.php"> ESCRITORIO VIRTUAL </a> </li>
+                        <li> <a href = "escritorio_virtual.php"> ESCRITORIO VIRTUAL </a> </li>
                         <li> <a href = "sobre.html"> SOBRE </a></li>
                 </ul>
 
