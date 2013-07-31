@@ -1,0 +1,122 @@
+/* 
+    Document   : standard
+    Created on : 31/07/2013, 16:31:39
+    Author     : Teixeira
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body	{
+	margin: 0; 
+	padding: 0;
+	font: 12px/1.4 Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	background-color: #008B8B;
+	}
+		
+div.principal{
+			width: 980px;				
+			border-width: 1px;
+			margin: 0 auto;
+			text-align:left;
+			background-color: Snow;
+			height: auto;
+			}
+				
+div.banner	{	
+			border-color: Snow;
+			width: 969px;
+			height: 236px;
+			z-index: 1;
+			}
+			
+ul#nav 	{
+			position:absolute; 
+			left:50px; 
+			top:210px;
+			margin:0; 
+			padding:0;
+			color: Snow;
+			z-index: 2;
+		} 
+		
+ul#nav li 	{ 
+			background: SkyBlue;
+			margin-right:5px;
+			display: inline;
+			list-style-type: none;
+			border-radius: 10px;
+			box-shadow: black 0.5em 0.5em 0.3em
+		}
+			
+ul#nav li a{
+			color: #fff;
+			font-size: 12px;
+			font-weight: bold;
+			text-decoration: none;
+			text-transform: uppercase;
+			padding: 3px 15px;
+		}
+			
+ul#nav li a:hover 	{  
+					background-color: PaleTurquoise;
+					border-radius: 10px;
+				}
+
+#busca 	{ 
+			position:absolute; 
+			right:10px; 
+			top:210px;
+			margin: 0;
+			padding: 0;
+			color: #fff;
+			font-size: 11px;
+			font-weight: bold;
+		}
+		
+#busca input 	{
+				background: SkyBlue;
+				border: none;
+				border-radius: 5px;
+				color:#fff;
+			}
+#busca input#submit 	{
+						background: DarkTurquoise;
+						border: 1px outset Turquoise;
+						color:#fff;
+						font-size:12px;
+						border-radius: 5px;
+					}
+					
+#texto	{
+			width: 500px;
+			height: auto;
+			float:left;
+			background-color: Snow;
+			margin-left: 20px;
+			margin-right: 20px;
+			text-align: justify;
+		}
+		
+#imagens{
+			float: right;
+			width: 400px;
+			margin-top: 10px;
+		}
+			
+#creditos	{
+				width: 980px;
+				height: 20px;
+				border-width: 1px;
+				clear:both;
+				background-color: Aquamarine;
+			}
+			
+#creditos p	{
+				margin-left: 20px;
+			}
+
+#creditos p span 	{
+					color: SeaGreen;
+					font-weight: bold;
+				}
