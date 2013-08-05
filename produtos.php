@@ -15,16 +15,6 @@
             #texto h2 {
                             margin-top: 50px;
                             font-size:23px;
-                    }
-            #imagens {
-                            background:#00C5CD;
-                            height:400px;
-                            width:200px;
-                            float:left;
-                            margin-top:0px;
-                            margin-bottom:50px;
-                            padding-top: 50px;
-                            padding-left: 30px;
                       }
             
             #texto dd   {
@@ -36,14 +26,37 @@
                             margin-bottom:30px;
                             margin-right: 25px;
                        }
+             #imagens {
+                            background:#00C5CD;
+                            height:400px;
+                            width:250px;
+                            float:left;
+                            margin-top:0px;
+                            margin-bottom:50px;
+                            padding-top: 50px;
+                            padding-left: 0px;
+                      }
              #imagens dt{
-                            margin-left: 10px;
                             margin-top: 15px;
+                            margin-bottom: 10px;
                             font-size: 20px;
+                            color: Green;
                         }
              #imagens dd{
                             font-size: 15px;
+                            margin-bottom: 10px;
+                            margin: 0px;
                         }
+             #imagens dd a{
+                            display: block;
+                            text-decoration: none;
+                            color: black;
+                            padding-left: 40px; 
+                        }
+             #imagens dd a:hover {
+                                    background-color: Snow;
+                                    color: green;
+                                 }
         </style>
     </head>
     <body>
@@ -155,14 +168,14 @@
             <div id = "imagens">
                 <dl>
                     <dt> Forever Living </dt>
-                        <dd> Higiene Pessoal<dd>
-                        <dd> Sucos </dd>
+                        <dd> <a href ='higiene.php'>Higiene Pessoal</a><dd>
+                        <dd> <a href ='sucos.php'>Sucos</a></dd>
                     <dt> Herbalife </dt>
-                    <dd> Nutri&ccedil;&abreve;o </dd>
-                        <dd> Fragrancias</dd>
+                        <dd> <a href ='nutricao.php'>Nutri&ccedil;&abreve;o</a></dd>
+                        <dd> <a href ='fragrancias.php'>Fragrancias</a></dd>
                     <dt> Outros Produtos </dt>
-                        <dd> Naturais <dd>
-                        <dd> Artificiais </dd>
+                        <dd> <a href ='naturais.php'>Naturais</a><dd>
+                        <dd> <a href ='artificiais.php'>Artificiais</a></dd>
                 </dl>
             </div>
             <div id = "creditos">
