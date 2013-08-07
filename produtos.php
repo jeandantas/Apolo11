@@ -89,14 +89,23 @@
                             botanicals, these products will give you something unexpected. Energy. Vibrancy. Wellness. You’ll notice it right 
                             away—and others will too. The difference is only natural.
                     </p>
+                    
+                    <?php
+                        function remove(&$vetor, $item, $size){
+                            for($i = $item; $i < $size - 1; $i++){
+                                $vetor[$i] = $vetor[$i+1];
+                            }
+                        }
+                        $forever = array("imagens/forever/bebidas/active_boost.jpg", "imagens/forever/higiene/aloe_first.jpg", "imagens/forever/bebidas/aloe_berry_nectar.jpg", "imagens/forever/higiene/aloe_lips.jpg", "imagens/forever/bebidas/aloe_bits.jpg", "imagens/forever/higiene/aloe_liquid_soap.jpg", "imagens/forever/bebidas/aloe_pomesteen.jpg", "imagens/forever/higiene/arctic_sea.jpg", "imagens/forever/bebidas/aloe_vera_gel.jpg", "imagens/forever/higiene/bright_toothgel.jpg", "imagens/forever/bebidas/aloe_freedom.jpg");
+                        $info = array("Active Boost", "Aloe Vera First", "Berry Nectar", "Aloe Lips", "Aloe Vera Bits", "Liquid Soap", "Aloe Pomesteen", "Arctic Sea", "Aloe Vera Gel", "Bright Toothgel", "Aloe Freedom");
+                        $price = array("U$$ 15,00", "U$$ 18,25", "U$$ 19,00", "U$$ 33,59", "U$$ 19,99", "U$$ 25,36", "U$$ 30,15", "U$$ 28,00", "U$$ 18,60", "U$$ 23,56", "U$$ 15,00");
+                    ?>
 
                     <dl>
-                            <dt><img src="imagens/forever/bee_pollen.jpg" alt="BEE POLLEN" title = "BEE POLLEN"/></dt>     
-                            <dd><a href="#">Bee Pollen</a></dd>
-                            <dd>Excellent supplement from the beehive</dd>
-                            <dd>Boosts energy</dd>    
-                            <dd>May enhance stamina</dd>
-                            <dd> Price: U$ 15,00 </dd>
+                            <dt><img <?php $item = rand(0, 10); echo 'src = ' .$forever[$item]; remove($forever, $item, 11);?>></dt>     
+                            <dd><a href='#'><?php echo $info[$item]; remove($info, $item, 11);?></a></dd>
+                            <dd>Mais detalhes</dd>
+                            <dd> Price: <?php echo $price[$item]; remove($price, $item, 11);?></dd>
                     </dl>
 
                     <dl>
