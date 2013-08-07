@@ -109,29 +109,38 @@
                     </dl>
 
                     <dl>
-                            <dt><img src="imagens/forever/bee_pollen.jpg" alt="BEE POLLEN" title = "BEE POLLEN"/></dt>     
-                            <dd><a href="#">Bee Pollen</a></dd>
-                            <dd>Excellent supplement from the beehive</dd>
-                            <dd>Boosts energy</dd>    
-                            <dd>May enhance stamina</dd>
-                            <dd> Price: U$ 15,00 </dd>
+                            <dt><img <?php $item = rand(0, 9); echo 'src = ' .$forever[$item]; remove($forever, $item, 10);?> alt = 'BEE POLLEN' title = 'BEE POLLEN'/></dt>     
+                            <dd><a href='#'><?php echo $info[$item]; remove($info, $item, 10);?></a></dd>
+                            <dd>Mais detalhes</dd>
+                            <dd> Price: <?php echo $price[$item]; remove($price, $item, 10);?></dd>
                     </dl>
 
                     <dl>
-                            <dt><img src="imagens/forever/bee_pollen.jpg" alt="BEE POLLEN" title = "BEE POLLEN"/></dt>     
-                            <dd><a href="#">Bee Pollen</a></dd>
-                            <dd>Excellent supplement from the beehive</dd>
-                            <dd>Boosts energy</dd>    
-                            <dd>May enhance stamina</dd>
-                            <dd> Price: U$ 15,00 </dd>
+                            <dt><img <?php $item = rand(0, 8); echo 'src = ' .$forever[$item]; remove($forever, $item, 9);?> alt = 'BEE POLLEN' title = 'BEE POLLEN'/></dt>     
+                            <dd><a href='#'><?php echo $info[$item]; remove($info, $item, 9);?></a></dd>
+                            <dd>Mais detalhes</dd>
+                            <dd> Price: <?php echo $price[$item]; remove($price, $item, 9);?></dd>
                     </dl>
 
                     <dl>
-                            <dt><img src="imagens/forever/bee_pollen.jpg" alt="BEE POLLEN" title = "BEE POLLEN"/></dt>     
-                            <dd><a href="#">Bee Pollen</a></dd>
-                            <dd>Excellent supplement from the beehive</dd>
-                            <dd>Boosts energy</dd>    
-                            <dd>May enhance stamina</dd>
+                            <dt><img <?php $item = rand(0, 7); echo 'src = ' .$forever[$item]; remove($forever, $item, 8);?> alt = 'BEE POLLEN' title = 'BEE POLLEN'/></dt>     
+                            <dd><a href='#'><?php echo $info[$item]; remove($info, $item, 8);?></a></dd>
+                            <dd>Mais detalhes</dd>
+                            <dd> Price: <?php echo $price[$item]; remove($price, $item, 8);?></dd>
+                    </dl>
+                    
+                    <dl>
+                            <dt><img <?php $item = rand(0, 6); echo 'src = ' .$forever[$item]; remove($forever, $item, 7);?> alt = 'BEE POLLEN' title = 'BEE POLLEN'/></dt>     
+                            <dd><a href='#'><?php echo $info[$item]; remove($info, $item, 7);?></a></dd>
+                            <dd>Mais detalhes</dd>
+                            <dd> Price: <?php echo $price[$item]; remove($price, $item, 7);?></dd>
+                    </dl>
+                    
+                    <dl>
+                            <dt><img <?php $item = rand(0, 5); echo 'src = ' .$forever[$item]; remove($forever, $item, 6);?> alt = 'BEE POLLEN' title = 'BEE POLLEN'/></dt>     
+                            <dd><a href='#'><?php echo $info[$item]; remove($info, $item, 6);?></a></dd>
+                            <dd>Mais detalhes</dd>
+                            <dd> Price: <?php echo $price[$item]; remove($price, $item, 6);?></dd>
                     </dl>
                     <hr style = "clear:both; border-width:1px; border-color: red;">
                     <h2> Herbalife </h2>
