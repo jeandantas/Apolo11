@@ -64,7 +64,7 @@ method="xxxx" >
          </div>
 
             <div id = "imagens">
-                    <p> Menu Lateral </p>
+                 
             </div>
 
             <div id = "creditos">
