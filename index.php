@@ -5,15 +5,15 @@
             <link rel="stylesheet" type="text/css" href="standard.css">
             <style type = "text/css">
                     #imagens img{
-                                            border-radius: 20px;
-                                            border-style: solid;
-                                            border-color: Snow;
-                                            margin-top: 20px;
-                                            }
+                                    border-radius: 20px;
+                                    border-style: solid;
+                                    border-color: Snow;
+                                    margin-top: 20px;
+                                }
                     #texto h2 	{
-                                            margin-top: 50px;
-                                            font-size:23px;
-                                            }
+                                    margin-top: 50px;
+                                    font-size:23px;
+                                }
             </style>
     </head>
     <body>

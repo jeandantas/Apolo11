@@ -15,16 +15,6 @@
             #texto h2 {
                             margin-top: 50px;
                             font-size:23px;
-                    }
-            #imagens {
-                            background:#00C5CD;
-                            height:400px;
-                            width:200px;
-                            float:left;
-                            margin-top:0px;
-                            margin-bottom:50px;
-                            padding-top: 50px;
-                            padding-left: 30px;
                       }
             
             #texto dd   {
@@ -36,14 +26,37 @@
                             margin-bottom:30px;
                             margin-right: 25px;
                        }
+             #imagens {
+                            background:#00C5CD;
+                            height:400px;
+                            width:250px;
+                            float:left;
+                            margin-top:0px;
+                            margin-bottom:50px;
+                            padding-top: 50px;
+                            padding-left: 0px;
+                      }
              #imagens dt{
-                            margin-left: 10px;
                             margin-top: 15px;
+                            margin-bottom: 10px;
                             font-size: 20px;
+                            color: Green;
                         }
              #imagens dd{
                             font-size: 15px;
+                            margin-bottom: 10px;
+                            margin: 0px;
                         }
+             #imagens dd a{
+                            display: block;
+                            text-decoration: none;
+                            color: black;
+                            padding-left: 40px; 
+                        }
+             #imagens dd a:hover {
+                                    background-color: Snow;
+                                    color: green;
+                                 }
         </style>
     </head>
     <body>
@@ -76,40 +89,58 @@
                             botanicals, these products will give you something unexpected. Energy. Vibrancy. Wellness. You’ll notice it right 
                             away—and others will too. The difference is only natural.
                     </p>
+                    
+                    <?php
+                        function remove(&$vetor, $item, $size){
+                            for($i = $item; $i < $size - 1; $i++){
+                                $vetor[$i] = $vetor[$i+1];
+                            }
+                        }
+                        $forever = array("imagens/forever/bebidas/active_boost.jpg", "imagens/forever/higiene/aloe_first.jpg", "imagens/forever/bebidas/aloe_berry_nectar.jpg", "imagens/forever/higiene/aloe_lips.jpg", "imagens/forever/bebidas/aloe_bits.jpg", "imagens/forever/higiene/aloe_liquid_soap.jpg", "imagens/forever/bebidas/aloe_pomesteen.jpg", "imagens/forever/higiene/arctic_sea.jpg", "imagens/forever/bebidas/aloe_vera_gel.jpg", "imagens/forever/higiene/bright_toothgel.jpg", "imagens/forever/bebidas/aloe_freedom.jpg");
+                        $info = array("Active Boost", "Aloe Vera First", "Berry Nectar", "Aloe Lips", "Aloe Vera Bits", "Liquid Soap", "Aloe Pomesteen", "Arctic Sea", "Aloe Vera Gel", "Bright Toothgel", "Aloe Freedom");
+                        $price = array("U$$ 15,00", "U$$ 18,25", "U$$ 19,00", "U$$ 33,59", "U$$ 19,99", "U$$ 25,36", "U$$ 30,15", "U$$ 28,00", "U$$ 18,60", "U$$ 23,56", "U$$ 15,00");
+                    ?>
 
                     <dl>
-                            <dt><img src="imagens/forever/bee_pollen.jpg" alt="BEE POLLEN" title = "BEE POLLEN"/></dt>     
-                            <dd><a href="#">Bee Pollen</a></dd>
-                            <dd>Excellent supplement from the beehive</dd>
-                            <dd>Boosts energy</dd>    
-                            <dd>May enhance stamina</dd>
-                            <dd> Price: U$ 15,00 </dd>
+                            <dt><img <?php $item = rand(0, 10); echo 'src = ' .$forever[$item]; remove($forever, $item, 11);?>></dt>     
+                            <dd><a href='#'><?php echo $info[$item]; remove($info, $item, 11);?></a></dd>
+                            <dd>Mais detalhes</dd>
+                            <dd> Price: <?php echo $price[$item]; remove($price, $item, 11);?></dd>
                     </dl>
 
                     <dl>
-                            <dt><img src="imagens/forever/bee_pollen.jpg" alt="BEE POLLEN" title = "BEE POLLEN"/></dt>     
-                            <dd><a href="#">Bee Pollen</a></dd>
-                            <dd>Excellent supplement from the beehive</dd>
-                            <dd>Boosts energy</dd>    
-                            <dd>May enhance stamina</dd>
-                            <dd> Price: U$ 15,00 </dd>
+                            <dt><img <?php $item = rand(0, 9); echo 'src = ' .$forever[$item]; remove($forever, $item, 10);?> alt = 'BEE POLLEN' title = 'BEE POLLEN'/></dt>     
+                            <dd><a href='#'><?php echo $info[$item]; remove($info, $item, 10);?></a></dd>
+                            <dd>Mais detalhes</dd>
+                            <dd> Price: <?php echo $price[$item]; remove($price, $item, 10);?></dd>
                     </dl>
 
                     <dl>
-                            <dt><img src="imagens/forever/bee_pollen.jpg" alt="BEE POLLEN" title = "BEE POLLEN"/></dt>     
-                            <dd><a href="#">Bee Pollen</a></dd>
-                            <dd>Excellent supplement from the beehive</dd>
-                            <dd>Boosts energy</dd>    
-                            <dd>May enhance stamina</dd>
-                            <dd> Price: U$ 15,00 </dd>
+                            <dt><img <?php $item = rand(0, 8); echo 'src = ' .$forever[$item]; remove($forever, $item, 9);?> alt = 'BEE POLLEN' title = 'BEE POLLEN'/></dt>     
+                            <dd><a href='#'><?php echo $info[$item]; remove($info, $item, 9);?></a></dd>
+                            <dd>Mais detalhes</dd>
+                            <dd> Price: <?php echo $price[$item]; remove($price, $item, 9);?></dd>
                     </dl>
 
                     <dl>
-                            <dt><img src="imagens/forever/bee_pollen.jpg" alt="BEE POLLEN" title = "BEE POLLEN"/></dt>     
-                            <dd><a href="#">Bee Pollen</a></dd>
-                            <dd>Excellent supplement from the beehive</dd>
-                            <dd>Boosts energy</dd>    
-                            <dd>May enhance stamina</dd>
+                            <dt><img <?php $item = rand(0, 7); echo 'src = ' .$forever[$item]; remove($forever, $item, 8);?> alt = 'BEE POLLEN' title = 'BEE POLLEN'/></dt>     
+                            <dd><a href='#'><?php echo $info[$item]; remove($info, $item, 8);?></a></dd>
+                            <dd>Mais detalhes</dd>
+                            <dd> Price: <?php echo $price[$item]; remove($price, $item, 8);?></dd>
+                    </dl>
+                    
+                    <dl>
+                            <dt><img <?php $item = rand(0, 6); echo 'src = ' .$forever[$item]; remove($forever, $item, 7);?> alt = 'BEE POLLEN' title = 'BEE POLLEN'/></dt>     
+                            <dd><a href='#'><?php echo $info[$item]; remove($info, $item, 7);?></a></dd>
+                            <dd>Mais detalhes</dd>
+                            <dd> Price: <?php echo $price[$item]; remove($price, $item, 7);?></dd>
+                    </dl>
+                    
+                    <dl>
+                            <dt><img <?php $item = rand(0, 5); echo 'src = ' .$forever[$item]; remove($forever, $item, 6);?> alt = 'BEE POLLEN' title = 'BEE POLLEN'/></dt>     
+                            <dd><a href='#'><?php echo $info[$item]; remove($info, $item, 6);?></a></dd>
+                            <dd>Mais detalhes</dd>
+                            <dd> Price: <?php echo $price[$item]; remove($price, $item, 6);?></dd>
                     </dl>
                     <hr style = "clear:both; border-width:1px; border-color: red;">
                     <h2> Herbalife </h2>
@@ -155,14 +186,14 @@
             <div id = "imagens">
                 <dl>
                     <dt> Forever Living </dt>
-                        <dd> Higiene Pessoal<dd>
-                        <dd> Sucos </dd>
+                        <dd> <a href ='higiene.php'>Higiene Pessoal</a><dd>
+                        <dd> <a href ='sucos.php'>Sucos</a></dd>
                     <dt> Herbalife </dt>
-                    <dd> Nutri&ccedil;&abreve;o </dd>
-                        <dd> Fragrancias</dd>
+                        <dd> <a href ='nutricao.php'>Nutri&ccedil;&abreve;o</a></dd>
+                        <dd> <a href ='fragrancias.php'>Fragrancias</a></dd>
                     <dt> Outros Produtos </dt>
-                        <dd> Naturais <dd>
-                        <dd> Artificiais </dd>
+                        <dd> <a href ='naturais.php'>Naturais</a><dd>
+                        <dd> <a href ='artificiais.php'>Artificiais</a></dd>
                 </dl>
             </div>
             <div id = "creditos">
