@@ -27,24 +27,7 @@
             <img src = "imagens/scan.png" width = "980px" height = "50px" title = "teste" alt = "teste">
 
             <div id = "texto">
-                <form name="nomedoform" action="xxxx" 
-                      method="xxxx" >
-                           <?php
-
-
-                          $nome = " "; //pega o nome do remetente
-                          $email = ""; //pega o email do remetente
-                          $receptor = ""; //seu email
-                          $mensagem = ""; //mensagem
-                          $assunto = ""; //assunto
-                          
-
-                          if (($nome == "") || ($email == "") || ($assunto == "") || ($mensagem == "")) {
-                              echo "Atencao! Todos os campos do formulario devem ser preenchidos.";
-                         
-                          ?>
-
-
+                <form name="nomedoform" action="processaContato.php" method="POST" >       
                     <table>
                         <tr> 
                             <th colspan="2">Formul&aacute;rio 
@@ -60,7 +43,7 @@
                         </tr>
                         <tr> 
                             <td><label>Assunto</label></td>
-                            <td><input name="subject" type="text" size="33" maxlength="1000"></td>
+                            <td><input name="assunto" type="text" size="33" maxlength="1000"></td>
                         </tr>
                         <tr> 
                             <td><label>*Coment&aacute;rios</label>
