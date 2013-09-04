@@ -1,0 +1,53 @@
+#logon{
+        position:relative;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:12px;
+        color:#036;
+        margin: 15px;
+}
+fieldset{
+        height: 150px;
+        width: 300px;
+        background-color:#20B2AA;
+}
+#texto01, #texto02, #confirm{
+        position: absolute;
+        left: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:12px;
+        font-weight:bold;
+}
+#field_user, #field_pass{
+        position: absolute;
+        left: 100px;
+}
+#texto01, #field_user{
+        top: 35px;
+}
+#texto02, #field_pass{
+        top: 65px;
+}
+#confirm{
+        top: 93px;
+        left: 99px;
+        background-color:#3CB371;
+}
+#entrar{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:15px;
+        color:#fff;
+        padding:2px 5px;
+        font-weight:bold;
+        background-color:#3CB371;
+        border:1px solid #036;
+}
+#opcoes{
+        position: absolute;
+        top: 118px;
+        left: 98px;
+        line-height: 20px;
+}
+
+h2{
+        margin-left: 15px;
+}
