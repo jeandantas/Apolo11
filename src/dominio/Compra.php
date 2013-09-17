@@ -17,7 +17,7 @@ class Compra {
     private $formaPagamento;
     private $descricao;
     private $idCliente;
-    
+  
     function __construct($compra, $data, $hora, $formaPagamento, $descricao, $idCliente) {
         $this->compra = $compra;
         $this->data = $data;

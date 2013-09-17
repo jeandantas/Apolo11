@@ -15,14 +15,12 @@ class Produto {
     private $nome;
     private $empresa;
     private $venda;
-    private $cpf;
     private $idproduto;
 
     function __construct($nome, $empresa, $venda, $cpf, $idproduto) {
         $this->nome = $nome;
         $this->empresa = $empresa;
         $this->venda = $venda;
-        $this->cpf = $cpf;
         $this->idproduto = $idproduto;
     }
 
@@ -48,14 +46,7 @@ class Produto {
 
     public function setVenda($venda) {
         $this->venda = $venda;
-    }
-
-    public function getCpf() {
-        return $this->cpf;
-    }
-
-    public function setCpf($cpf) {
-        $this->cpf = $cpf;
+    
     }
 
     public function getIdproduto() {
