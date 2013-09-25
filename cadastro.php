@@ -8,7 +8,7 @@
 	<body>
             <h2>Formulário de Cadastro</h2>
             <hr>
-            <form method="POST" action="prcessaCadastro">
+            <form name ="cadastro" action="prcessaCadastro.php" method="POST">
 
                 <label> Nome </label> 
                 <input type ="text" name ="nome">

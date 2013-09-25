@@ -77,5 +77,25 @@
                 echo $row->endereco ."<br>";
             }
         }
+        
+        public function selectClienteCPF($cpf){
+            $conn = get_connection();
+            
+            $sql = "SELECT * FROM Cliente WHERE cpf = ?";
+            
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(1,$cpf);
+            $rs = $stmt->query();
+        }
+        
+        public function  selectClienteEmail($email){
+            $conn = get_connection();
+            
+            $sql = "SELECT * FROM Cliente WHERE email = ?";
+            
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(1,$cpf);
+            $rs = $stmt->query();
+        }
     }
 ?>

@@ -7,20 +7,38 @@
 
     class ClienteControl{
         
+        function __construct() {
+            
+        }
+        
         function cadastroCliente($nome, $sobrenome, $cpf, $email, $endereco, $senha){
             $dao = new ClienteDao();
             $id = $dao.getIdLivre();
             
-            if(validarDadosCliente($cpf, $email)){
-                header("Location: ../../erros/erroCadastroLider.php");
+            if(validaCPF($cpf)){
+                
+                return "CPF inválido";
+            }
+            elseif(validaEmail($email)) {
+ 
+                return "Email inválido";
             }
             
             $cliente = new Cliente($nome, $sobrenome, $cpf, $email, $endereco, $senha, $id, false);
             
             $dao->insertCliente($cliente);
+            return null;
         }
         
-        function validarDadosCliente($cpf, $email){
+        function validaCPF($cpf){
+            //Esta errado!!!
+            $dao = new ClienteDao();
+            
+            $dao->selectCliente($cpf);
+            $dao->selectCliente($email);
+        }
+        
+        function validaEmail($email){
             //Esta errado!!!
             $dao = new ClienteDao();
             
