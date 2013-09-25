@@ -14,13 +14,14 @@ class Produto {
 
     private $nome;
     private $empresa;
-    private $venda;
-    private $idproduto;
+    private $preco;
+    private $descricao;
+    private $IdProduto;
 
-    function __construct($nome, $empresa, $venda, $cpf, $idproduto) {
+    function __construct($nome, $empresa, $preco, $cpf, $idproduto) {
         $this->nome = $nome;
         $this->empresa = $empresa;
-        $this->venda = $venda;
+        $this->venda = $preco;
         $this->idproduto = $idproduto;
     }
 
@@ -40,21 +41,21 @@ class Produto {
         $this->empresa = $empresa;
     }
 
-    public function getVenda() {
-        return $this->venda;
+    public function getPreco() {
+        return $this->preco;
     }
 
-    public function setVenda($venda) {
-        $this->venda = $venda;
+    public function setPreco($preco) {
+        $this->preco = $preco;
     
     }
 
-    public function getIdproduto() {
-        return $this->idproduto;
+    public function getIdProduto() {
+        return $this->IdProduto;
     }
 
-    public function setIdproduto($idproduto) {
-        $this->idproduto = $idproduto;
+    public function setIdProduto($IdProduto) {
+        $this->IdProduto = $IdProduto;
     }
 
 

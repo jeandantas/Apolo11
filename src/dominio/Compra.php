@@ -11,26 +11,26 @@
  * @author 20111144110106
  */
 class Compra {
-    private $compra;
+    private $idCompra;
     private $data;
     private $hora;
     private $formaPagamento;
     private $descricao;
     private $idCliente;
   
-    function __construct($compra, $data, $hora, $formaPagamento, $descricao, $idCliente) {
-        $this->compra = $compra;
+    function __construct($idCompra, $data, $hora, $formaPagamento, $descricao, $idCliente) {
+        $this->idCompra = $idCompra;
         $this->data = $data;
         $this->hora = $hora;
         $this->formaPagamento = $formaPagamento;
         $this->descricao = $descricao;
         $this->idCliente = $idCliente;
     }
-    public function getCompra() {
+    public function getIdCompra() {
         return $this->compra;
     }
 
-    public function setCompra($compra) {
+    public function setIdCompra($compra) {
         $this->compra = $compra;
     }
 
