@@ -1,0 +1,27 @@
+/* 
+    Document   : cadastro
+    Created on : 25/09/2013, 17:13:21
+    Author     : Teixeira
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+form{
+    border-style: solid;
+    width: 500px;
+    border-color: Skyblue;
+    margin: 0 auto;
+}
+
+input, select, label{
+    display: block;
+    position: relative;
+}
+
+label{
+    margin-top: 15px;
+}
+
+input{
+    width: 200px;
+}

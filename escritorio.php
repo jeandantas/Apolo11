@@ -1,8 +1,8 @@
 <html>
 	<head>
 		<title> Standard Document </title>
-		<link rel="stylesheet" type="text/css" href="standard.css">
-                <link rel="stylesheet" type="text/css" href="escritorio.css">
+		<link rel="stylesheet" type="text/css" href="css/standard.css">
+                <link rel="stylesheet" type="text/css" href="css/escritorio.css">
 	</head>
 	<body>
 		<div class = "principal">

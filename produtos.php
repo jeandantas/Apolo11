@@ -2,7 +2,7 @@
     <head>
         <title> Tex Produtos Naturais | Para uma Vida Saudável </title>
         <link href='http://fonts.googleapis.com/css?family=Stalinist+One' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="standard.css">
+        <link rel="stylesheet" type="text/css" href="css/standard.css">
         <style type = "text/css">
             #texto	{
                             width: 700px;

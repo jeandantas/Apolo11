@@ -1,7 +1,7 @@
 <html>
     <head>
         <title> Standard Document </title>
-        <link rel="stylesheet" type="text/css" href="standard.css">
+        <link rel="stylesheet" type="text/css" href="css/standard.css">
     </head>
     <body>
         <div class = "principal">
