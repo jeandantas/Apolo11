@@ -12,7 +12,7 @@
         public function insertCompra($compra){
             $conn = get_connection();
             
-            $stmt = $conn->prepare("INSERT INTO compra(data, hora, formaPagamento, descricao, idCliente, idCompra)" 
+            $stmt = $conn->prepare("INSERT INTO Compra(data, hora, formaPagamento, descricao, idCliente, idCompra)" 
                                    +  "VALUES(?,?,?,?,?,?)");
             
             $stmt->bindParam(1,$compra->getData());
@@ -24,8 +24,60 @@
             $stmt->execute();
         }
         
-        public function deleteCompra($cliente){
+        public function deleteCompra($compra){
+            $conn = get_connection();
             
+            $stmt = $conn->prepare("DELETE FROM Compra WHERE idCompra = ?");
+            
+            $stmt->bindParam(1,$compra->getIdCompra());
+            $stmt->execute();
+        }
+        
+        public function updateCompra($id, $compra){
+            $conn = get_connection();
+            
+            $sql = "UPDATE Compra SET descricao = ? WHERE idCompra = ?";
+            
+            $stmt = $conn->prepare($sql);
+            
+            $stmt->bindParam(1,$compra->getDescricao());
+            $stmt->bindParam(2,$id);
+            $stmt->execute();
+        }
+        
+        public function selectCompra($id){
+            $conn = get_connection();
+            
+            $sql = "SELECT * FROM Compra WHERE idCompra = ?";
+            
+            $stmt = $conn->prepare($sql);
+ 
+            $stmt->bindParam(1,$id);
+            $rs = $stmt->query();
+            
+            while($row = $rs->fetch(PDO::FETCH_OBJ)){
+                echo $row->data ."<br>";
+                echo $row->hora ."<br>";
+                echo $row->formaPagamento ."<br>";
+                echo $row->descricao ."<br>";
+            }
+        }
+        
+        public function selectAllCliente(){
+            $conn = get_connection();
+            
+            $sql = "SELECT * FROM Compra";
+            
+            $stmt = $conn->prepare($sql);
+            
+            $rs = $stmt->query();
+            
+            while($row = $rs->fetch(PDO::FETCH_OBJ)){
+                echo $row->data ."<br>";
+                echo $row->hora ."<br>";
+                echo $row->formaPagamento ."<br>";
+                echo $row->descricao ."<br>";
+            }
         }
     }
 ?>

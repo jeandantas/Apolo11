@@ -6,7 +6,7 @@
         public function insertCliente($cliente){
             $conn = get_connection();
             
-            $stmt = $conn->prepare("INSERT INTO cliente(nome, sobrenome, cpf, email, endereco, 
+            $stmt = $conn->prepare("INSERT INTO Cliente(nome, sobrenome, cpf, email, endereco, 
                                     senha, idCliente, ehVisitante)" + "VALUES(?,?,?,?,?,?,?,?)");
             
             $stmt->bindParam(1,$cliente->getNome());
@@ -32,7 +32,7 @@
         public function updateCliente($id, $cliente){
             $conn = get_connection();
             
-            $sql = "UPDATE Cliente SET nome = ? WHERE id = ?";
+            $sql = "UPDATE Cliente SET nome = ? WHERE idCliente = ?";
             
             $stmt = $conn->prepare($sql);
             
@@ -57,7 +57,6 @@
                 echo $row->cpf ."<br>";
                 echo $row->email ."<br>";
                 echo $row->endereco ."<br>";
-                echo $row->senha ."<br>";
             }
         }
         
@@ -76,7 +75,6 @@
                 echo $row->cpf ."<br>";
                 echo $row->email ."<br>";
                 echo $row->endereco ."<br>";
-                echo $row->senha ."<br>";
             }
         }
     }
