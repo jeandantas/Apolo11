@@ -8,7 +8,7 @@
 	<body>
             <h2>Formulário de Cadastro</h2>
             <hr>
-            <form name ="cadastro" action="prcessaCadastro.php" method="POST">
+            <form name ="cadastro" action="processaCadastro.php" method="POST">
 
                 <label> Nome </label> 
                 <input type ="text" name ="nome">
@@ -21,7 +21,7 @@
                 <br>
 
                 <label> CPF </label> 
-                <input type ="text" name ="login"> 
+                <input type ="text" name ="cpf"> 
 
 
 

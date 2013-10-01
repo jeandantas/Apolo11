@@ -1,5 +1,5 @@
 <?php
-    require_once '../src/dominio/Cliente.class.php';
+    require_once '../dominio/Cliente.php';
     include 'connectionFactory.inc.php';
     
     class ClienteDao{
@@ -86,6 +86,9 @@
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(1,$cpf);
             $rs = $stmt->query();
+            
+            $rs->fetch(PDO::FETCH_OBJ);
+            
         }
         
         public function  selectClienteEmail($email){
@@ -95,7 +98,22 @@
             
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(1,$cpf);
+            $rs = $stmt->query();  
+        }
+        
+        public function getIdLivre(){
+            $conn = get_connection();
+            
+            $sql = "SELECT MAX(id) FROM Cliente";
+            
+            $stmt = $conn->prepare($sql);
+            
             $rs = $stmt->query();
+
+            $row = $rs->fetch(PDO::FETCH_OBJ);
+            
+            return $row + 1;
+             
         }
     }
 ?>

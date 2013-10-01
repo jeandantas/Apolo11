@@ -1,5 +1,6 @@
 <?php
-
+    require_once '../dominio/Cliente.php';
+    require_once '../dao/ClienteDao.php';
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -14,27 +15,17 @@
         function cadastroCliente($nome, $sobrenome, $cpf, $email, $endereco, $senha){
             $dao = new ClienteDao();
             $id = $dao.getIdLivre();
-            
-            if(validaCPF($cpf)){
-                
-                return "CPF inválido";
-            }
-            elseif(validaEmail($email)) {
- 
-                return "Email inválido";
-            }
-            
+  
             $cliente = new Cliente($nome, $sobrenome, $cpf, $email, $endereco, $senha, $id, false);
-            
             $dao->insertCliente($cliente);
             return null;
         }
         
-        function validaCPF($cpf){
+        function validarCPF($cpf){
             //Esta errado!!!
             $dao = new ClienteDao();
             
-            $dao->selectCliente($cpf);
+            $rs = $dao->selectCliente($cpf);
             $dao->selectCliente($email);
         }
         
