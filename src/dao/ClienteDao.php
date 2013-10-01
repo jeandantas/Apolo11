@@ -1,13 +1,13 @@
 <?php
-    require_once '../dominio/Cliente.php';
-    include 'connectionFactory.inc.php';
+    include ('../src/dominio/Cliente.php');
+    include ('connectionFactory.inc.php');
     
     class ClienteDao{
         public function insertCliente($cliente){
             $conn = get_connection();
             
             $stmt = $conn->prepare("INSERT INTO Cliente(nome, sobrenome, cpf, email, endereco, 
-                                    senha, idCliente, ehVisitante)" + "VALUES(?,?,?,?,?,?,?,?)");
+                                    senha, idCliente, ehVisitante)" + " VALUES(?,?,?,?,?,?,?,?)");
             
             $stmt->bindParam(1,$cliente->getNome());
             $stmt->bindParam(2,$cliente->getSobrenome());
@@ -102,18 +102,18 @@
         }
         
         public function getIdLivre(){
-            $conn = get_connection();
+            /*$conn = get_connection();
             
-            $sql = "SELECT MAX(id) FROM Cliente";
-            
+            $sql = "SELECT MAX(idCliente) FROM Cliente";
+          
             $stmt = $conn->prepare($sql);
-            
+            $stmt->
             $rs = $stmt->query();
 
             $row = $rs->fetch(PDO::FETCH_OBJ);
             
-            return $row + 1;
-             
+            return $row + 1;*/
+            return 1;
         }
     }
 ?>

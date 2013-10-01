@@ -30,15 +30,6 @@
 
                 <br>
 
-                <label> Sexo </label>
-                <select>
-                    <option> Masculino </option>
-                    <option> Feminino </option>
-                    <option> Indeciso </option>
-                </select> 
-
-
-
                 <label> E-mail </label> 
                 <input type ="text" name ="email"> <br>
 

@@ -47,11 +47,11 @@ class Cliente {
         $this->sobrenome = $sobrenome;
     }
 
-    public function getCpf() {
+    public function getCPF() {
         return $this->cpf;
     }
 
-    public function setCpf($cpf) {
+    public function setCPF($cpf) {
         $this->cpf = $cpf;
     }
 

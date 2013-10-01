@@ -1,11 +1,7 @@
 <?php
-    require_once '../dominio/Cliente.php';
-    require_once '../dao/ClienteDao.php';
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
+    include ("src/dominio/Cliente.php");
+    include ("src/dao/ClienteDao.php");
+    
     class ClienteControl{
         
         function __construct() {
@@ -14,7 +10,7 @@
         
         function cadastroCliente($nome, $sobrenome, $cpf, $email, $endereco, $senha){
             $dao = new ClienteDao();
-            $id = $dao.getIdLivre();
+            $id = $dao->getIdLivre();
   
             $cliente = new Cliente($nome, $sobrenome, $cpf, $email, $endereco, $senha, $id, false);
             $dao->insertCliente($cliente);
@@ -36,5 +32,6 @@
             $dao->selectCliente($cpf);
             $dao->selectCliente($email);
         }
+        
     }
 ?>
