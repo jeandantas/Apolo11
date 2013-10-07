@@ -1,6 +1,6 @@
 <?php
-    include ("src/dominio/Cliente.php");
-    include ("src/dao/ClienteDao.php");
+    require 'src/dao/ClienteDao.php';
+    require 'src/dominio/Cliente.php';
     
     class ClienteControl{
         

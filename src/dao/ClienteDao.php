@@ -4,20 +4,26 @@
     
     class ClienteDao{
         public function insertCliente($cliente){
-            $conn = get_connection();
-            
-            $stmt = $conn->prepare("INSERT INTO Cliente(nome, sobrenome, cpf, email, endereco, 
-                                    senha, idCliente, ehVisitante)" + " VALUES(?,?,?,?,?,?,?,?)");
-            
-            $stmt->bindParam(1,$cliente->getNome());
-            $stmt->bindParam(2,$cliente->getSobrenome());
-            $stmt->bindParam(3,$cliente->getCPF());
-            $stmt->bindParam(4,$cliente->getEmail());
-            $stmt->bindParam(5,$cliente->getEndereco());
-            $stmt->bindParam(6,$cliente->getSenha());
-            $stmt->bindParam(7,$cliente->getIdCliente());
-            $stmt->bindParam(8,$cliente->getEhVisitante());
-            $stmt->execute();
+            try{
+                $conn = get_connection();
+                
+                $stmt = $conn->prepare('INSERT INTO Cliente(nome, sobrenome, cpf, email, endereco, 
+                                        senha, idCliente, ehVisitante) VALUES (:nome, :sobrenome, 
+                                        :cpf, :email, :endereco, :senha, :idCliente, :ehVisitante)');
+                
+                $stmt->bindValue(':nome', $cliente->getNome(), PDO::PARAM_STR);
+                $stmt->bindValue(':sobrenome', $cliente->getSobrenome(), PDO::PARAM_STR);
+                $stmt->bindValue(':cpf', $cliente->getCPF(), PDO::PARAM_STR);
+                $stmt->bindValue(':email', $cliente->getEmail(), PDO::PARAM_INT);
+                $stmt->bindValue(':endereco', $cliente->getEndereco(), PDO::PARAM_STR);
+                $stmt->bindValue(':senha', $cliente->getSenha(), PDO::PARAM_STR);
+                $stmt->bindValue(':idCliente', $cliente->getIdCliente(), PDO::PARAM_STR);
+                $stmt->bindValue(':ehVisitante', $cliente->getEhVisitante(), PDO::PARAM_STR);
+                $stmt->execute();
+                return null;
+             }catch (PDOException $ex){
+                echo "Erro: ".$ex->getMessage(); 
+             }
         }
         
         public function deleteCliente($cliente){

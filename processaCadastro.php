@@ -1,5 +1,5 @@
 <?php
-    include ("src/controller/ClienteControl.php");
+    require 'src/controller/ClienteControl.php';
  
     $nome       = $_POST["nome"];
     $sobrenome  = $_POST["sobrenome"];
