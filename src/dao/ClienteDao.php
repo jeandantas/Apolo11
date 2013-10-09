@@ -108,18 +108,23 @@
         }
         
         public function getIdLivre(){
-            /*$conn = get_connection();
-            
-            $sql = "SELECT MAX(idCliente) FROM Cliente";
-          
-            $stmt = $conn->prepare($sql);
-            $stmt->
+            /*
+            $conn = get_connection();
+
+            $sql = "SELECT MAX(idCliente) as maxId FROM Cliente";
+
+            //$stmt = $conn->prepare($sql);  >> Não precisa disso para a consulta
             $rs = $stmt->query();
 
             $row = $rs->fetch(PDO::FETCH_OBJ);
-            
-            return $row + 1;*/
-            return 1;
+
+            return (($row->maxId) + 1);
+            */
+            $conn = get_connection();
+
+            $rs = $conn->query("SELECT MAX(idCliente) as maxId FROM Cliente");                 
+            $row = $rs->fetch(PDO::FETCH_OBJ);
+            return ($row->maxId)+1; 
         }
     }
 ?>
